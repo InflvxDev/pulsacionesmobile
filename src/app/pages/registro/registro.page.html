@@ -1,0 +1,47 @@
+<app-header titulo="Registro De Pulsaciones"></app-header>
+
+<ion-content>
+
+    <form #formulario="ngForm" (ngSubmit)="onSubmitTemplate()">
+
+        <ion-item>
+            <ion-label position="floating">Nombre: </ion-label>
+            <ion-input type="text" placeholder="Sebastian" [(ngModel)]="persona.nombre" name="nombre" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="floating">Apellido: </ion-label>
+            <ion-input type="text" placeholder="Ochoa" [(ngModel)]="persona.apellido" name="apellido" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="floating">Edad: </ion-label>
+            <ion-input type="number" placeholder="18" [(ngModel)]="persona.edad" name="edad" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="floating">Genero: </ion-label>
+            <ion-select [(ngModel)]="persona.genero" name="genero" required>
+                <ion-select-option>Femenino</ion-select-option>
+                <ion-select-option>Masculino</ion-select-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Pulso: {{persona.pulsacion}}</ion-label>
+        </ion-item>
+
+        <ion-button color="success" type="submit" [disabled]="formulario.invalid" expand="full">
+            Registrar
+        </ion-button>
+
+
+    </form>
+
+
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar color="danger">
+    </ion-toolbar>
+</ion-footer>

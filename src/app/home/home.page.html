@@ -1,0 +1,26 @@
+<ion-header [translucent]="true" class="ion-no-border">
+    <ion-toolbar color="danger">
+        <ion-buttons slot="start">
+            <ion-menu-button menu="first"></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Pulsaciones App</ion-title>
+
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-card>
+        <ion-img src="/assets/pulso.jpg"></ion-img>
+        <ion-card-content>
+            Las Pulsaciones mide la cantidad de veces por minuto que el corazón se contrae o late. La velocidad de los latidos del corazón varía como resultado de la actividad física, las amenazas a la seguridad y las respuestas emocionales. La frecuencia cardíaca
+            en reposo es la que tiene una persona cuando está relajada.
+        </ion-card-content>
+    </ion-card>
+    <ion-button expand="block" color="danger" routerLink="/registro">Registrar Pulsacion</ion-button>
+    <ion-button expand="block" color="danger" routerLink="/consulta">Listado de Pulsaciones</ion-button>
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar color="danger">
+    </ion-toolbar>
+</ion-footer>
