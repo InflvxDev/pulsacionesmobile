@@ -15,10 +15,7 @@ const routes: Routes = [
     path: 'registro',
     loadChildren: () => import('./pages/registro/registro.module').then( m => m.RegistroPageModule)
   },
-  {
-    path: 'consulta',
-    loadChildren: () => import('./pages/consulta/consulta.module').then( m => m.ConsultaPageModule)
-  },
+
 ];
 
 @NgModule({
